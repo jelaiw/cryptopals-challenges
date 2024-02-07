@@ -5,3 +5,4 @@
 2. Python randrange. https://docs.python.org/3/library/random.html#functions-for-integers.
 2. Python SHA1. https://docs.python.org/3/library/hashlib.html#hashlib.sha1.
 2. pwntools xor. https://docs.pwntools.com/en/stable/util/fiddling.html#pwnlib.util.fiddling.xor.
+2. Frequency analysis. https://en.wikipedia.org/wiki/Frequency_analysis.
