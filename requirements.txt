@@ -1,2 +1,2 @@
 pycryptodome==3.20.0
-pwntools=4.11.1
+pwntools==4.11.1
