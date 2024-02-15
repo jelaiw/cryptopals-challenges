@@ -8,3 +8,5 @@
 2. pwntools documentation. https://docs.pwntools.com/.
 2. pwntools xor. https://docs.pwntools.com/en/stable/util/fiddling.html#pwnlib.util.fiddling.xor.
 2. Frequency analysis. https://en.wikipedia.org/wiki/Frequency_analysis.
+2. PyCryptodome CBC Mode. https://www.pycryptodome.org/src/cipher/classic#cbc-mode.
+2. PyCryptodome Crypto.Util.Padding module. https://www.pycryptodome.org/src/util/util#crypto-util-padding-module.
