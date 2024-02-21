@@ -12,3 +12,4 @@
 2. PyCryptodome Crypto.Util.Padding module. https://www.pycryptodome.org/src/util/util#crypto-util-padding-module.
 2. Python secrets.token_bytes. https://docs.python.org/3/library/secrets.html#generating-tokens.
 2. Hamming distance. https://en.wikipedia.org/wiki/Hamming_distance.
+2. Convert int to binary string in Python. https://stackoverflow.com/a/699892.
