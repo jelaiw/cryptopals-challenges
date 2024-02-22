@@ -13,3 +13,4 @@
 2. Python secrets.token_bytes. https://docs.python.org/3/library/secrets.html#generating-tokens.
 2. Hamming distance. https://en.wikipedia.org/wiki/Hamming_distance.
 2. Convert int to binary string in Python. https://stackoverflow.com/a/699892.
+2. Format Specification Mini-language. https://docs.python.org/3/library/string.html#format-specification-mini-language.
