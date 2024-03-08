@@ -16,3 +16,4 @@
 2. Format Specification Mini-language. https://docs.python.org/3/library/string.html#format-specification-mini-language.
 2. SciPy Hamming distance. https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.hamming.html.
 2. Key corresponding to min value in dict. https://stackoverflow.com/a/3282904.
+2. Secure Remote Password protocol. https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol.
