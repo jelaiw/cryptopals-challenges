@@ -2,7 +2,6 @@ from pwn import *
 import json
 from getpass import getpass
 from random import randrange
-from pprint import pprint
 from Crypto.Util.number import long_to_bytes, bytes_to_long
 import hmac
 
