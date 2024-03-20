@@ -3,6 +3,7 @@ import json
 from getpass import getpass
 from random import randrange
 from pprint import pprint
+from Crypto.Util.number import long_to_bytes, bytes_to_long
 
 # Pre-negotiated parameters.
 N = int(
@@ -16,6 +17,16 @@ N = int(
 "fffffffffffff", 16)
 g = 2
 k = 3
+
+def client_x(salt, password):
+    h = hashlib.sha256()
+    h.update(long_to_bytes(salt))
+    h.update(password)
+    return bytes_to_long(h.digest())
+
+def verifier(salt, password):
+    x = client_x(salt, password)
+    return pow(g, x, N)
 
 I = 'carol'
 a = randrange(1, N)
@@ -31,6 +42,5 @@ r.sendline(json.dumps(payload).encode())
 
 line = r.recvline()
 data = json.loads(line)
-pprint(data)
 
 password = getpass()
