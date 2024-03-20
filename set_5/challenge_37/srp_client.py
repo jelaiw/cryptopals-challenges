@@ -2,8 +2,9 @@ from pwn import *
 import json
 from getpass import getpass
 from random import randrange
-from Crypto.Util.number import long_to_bytes, bytes_to_long
+from Crypto.Util.number import long_to_bytes
 import hmac
+from srp_helper import client_x, scramble
 
 # Pre-negotiated parameters.
 N = int(
@@ -17,22 +18,6 @@ N = int(
 "fffffffffffff", 16)
 g = 2
 k = 3
-
-def client_x(salt, password):
-    h = hashlib.sha256()
-    h.update(long_to_bytes(salt))
-    h.update(password)
-    return bytes_to_long(h.digest())
-
-def verifier(salt, password):
-    x = client_x(salt, password)
-    return pow(g, x, N)
-
-def scramble(A, B):
-    h = hashlib.sha256()
-    h.update(long_to_bytes(A))
-    h.update(long_to_bytes(B))
-    return bytes_to_long(h.digest())
 
 I = 'carol'
 a = randrange(1, N)
