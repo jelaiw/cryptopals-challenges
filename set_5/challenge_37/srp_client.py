@@ -4,6 +4,7 @@ from getpass import getpass
 from random import randrange
 from pprint import pprint
 from Crypto.Util.number import long_to_bytes, bytes_to_long
+import hmac
 
 # Pre-negotiated parameters.
 N = int(
@@ -38,20 +39,34 @@ I = 'carol'
 a = randrange(1, N)
 A = pow(g, a, N)
 
+r = remote('::1', 9999)
+
+print("Sending I and A to Steve.")
 payload = {
     "I": I,
     "A": A,
 }
-
-r = remote('::1', 9999)
 r.sendline(json.dumps(payload).encode())
 
+print("Waiting for salt and B from Steve.")
 line = r.recvline()
 data = json.loads(line)
 s = data["s"]
 B = data["B"]
 
 u = scramble(A, B)
-print(u)
 
-password = getpass()
+P = getpass()
+x = client_x(s, P.encode())
+
+S_c = pow(B - k * pow(g, x, N), a + u * x, N)
+K_c = hashlib.sha256(long_to_bytes(S_c)).digest()
+
+print("Sending MAC of session key to Steve.")
+mac = hmac.digest(K_c, long_to_bytes(s), 'sha256')
+r.sendline(mac)
+
+line = r.recvline(keepends=False)
+print(line)
+
+r.close()

@@ -2,6 +2,7 @@ from pwn import *
 import json
 from random import randrange
 from Crypto.Util.number import long_to_bytes, bytes_to_long
+import hmac
 
 # Pre-negotiated parameters.
 N = int(
@@ -48,7 +49,15 @@ else:
 
 A = data["A"]
 u = scramble(A, B)
-print(u)
 
-line = l.recvline()
+S_s = pow(A * pow(v, u, N), b, N)
+K_s = hashlib.sha256(long_to_bytes(S_s)).digest()
+
+print("Waiting for MAC from Carol.")
+line = l.recvline(keepends=False)
+if hmac.compare_digest(line, hmac.digest(K_s, long_to_bytes(s), 'sha256')):
+    l.sendline(b"OK")
+else:
+    l.sendline(b"Nein")
+
 l.close()
