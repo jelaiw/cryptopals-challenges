@@ -1,5 +1,6 @@
 from pwn import *
 import json
+from getpass import getpass
 from random import randrange
 from pprint import pprint
 
@@ -31,3 +32,5 @@ r.sendline(json.dumps(payload).encode())
 line = r.recvline()
 data = json.loads(line)
 pprint(data)
+
+password = getpass()
