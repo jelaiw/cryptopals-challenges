@@ -28,6 +28,12 @@ def verifier(salt, password):
     x = client_x(salt, password)
     return pow(g, x, N)
 
+def scramble(A, B):
+    h = hashlib.sha256()
+    h.update(long_to_bytes(A))
+    h.update(long_to_bytes(B))
+    return bytes_to_long(h.digest())
+
 I = 'carol'
 a = randrange(1, N)
 A = pow(g, a, N)
