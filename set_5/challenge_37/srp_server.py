@@ -1,5 +1,6 @@
 from pwn import *
 import json
+from random import randrange
 
 # Pre-negotiated parameters.
 N = int(
@@ -21,13 +22,17 @@ v = 1290407028566102901343375370458303158357319861567441871361819963827896973112
 l = listen(9999)
 _ = l.wait_for_connection()
 
+b = randrange(1, N)
+B = k * v + pow(g, b, N)
+B = B % N
+
 print("Waiting for I and A from Carol.")
 line = l.recvline()
 data = json.loads(line)
 if "I" in data and data["I"] == 'carol' and "A" in data:
     payload = {
         "s": s,
-        "v": v,
+        "B": B,
     }
     l.sendline(json.dumps(payload).encode())
 else:
