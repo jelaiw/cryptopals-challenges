@@ -48,5 +48,10 @@ r.sendline(json.dumps(payload).encode())
 
 line = r.recvline()
 data = json.loads(line)
+s = data["s"]
+B = data["B"]
+
+u = scramble(A, B)
+print(u)
 
 password = getpass()

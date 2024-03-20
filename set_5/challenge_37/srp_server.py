@@ -46,5 +46,9 @@ else:
     print(line)
     exit(1)
 
+A = data["A"]
+u = scramble(A, B)
+print(u)
+
 line = l.recvline()
 l.close()
