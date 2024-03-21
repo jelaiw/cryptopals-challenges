@@ -48,7 +48,7 @@ K_c = hashlib.sha256(long_to_bytes(S_c)).digest()
 
 print("Sending MAC of session key to Steve.")
 mac = hmac.digest(K_c, long_to_bytes(s), 'sha256')
-r.sendline(mac)
+r.sendline(mac.hex().encode())
 
 line = r.recvline(keepends=False)
 print(line)
