@@ -50,7 +50,8 @@ K_s = hashlib.sha256(long_to_bytes(S_s)).digest()
 
 print("Waiting for MAC from Carol.")
 line = l.recvline(keepends=False)
-if hmac.compare_digest(line, hmac.digest(K_s, long_to_bytes(s), 'sha256')):
+mac_bytes = bytes.fromhex(line.decode())
+if hmac.compare_digest(mac_bytes, hmac.digest(K_s, long_to_bytes(s), 'sha256')):
     l.sendline(b"OK")
 else:
     l.sendline(b"Nein")
