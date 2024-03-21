@@ -1,10 +1,7 @@
 from pwn import *
 import json
-from getpass import getpass
-from random import randrange
 from Crypto.Util.number import long_to_bytes
 import hmac
-from srp_helper import client_x, scramble
 
 # Pre-negotiated parameters.
 N = int(
