@@ -17,7 +17,7 @@ g = 2
 k = 3
 
 I = 'carol'
-A = 0
+A = N
 
 r = remote('::1', 9999)
 
