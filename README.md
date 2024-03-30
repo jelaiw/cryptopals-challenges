@@ -22,3 +22,4 @@
 2. Python getpass. https://docs.python.org/3/library/getpass.html.
 2. Byte order, size, and alignment (struct). https://docs.python.org/2/library/struct.html#byte-order-size-and-alignment.
 2. Format characters (struct). https://docs.python.org/2/library/struct.html#format-characters.
+2. Padding (cryptography), PKCS#7. https://en.wikipedia.org/wiki/Padding_(cryptography)#PKCS#5_and_PKCS#7.
