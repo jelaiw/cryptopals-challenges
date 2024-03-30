@@ -20,3 +20,5 @@
 2. hmac.compare_digest. https://docs.python.org/3/library/hmac.html#hmac.compare_digest.
 2. pwntools listen. https://docs.pwntools.com/en/stable/tubes/sockets.html#pwnlib.tubes.listen.listen.
 2. Python getpass. https://docs.python.org/3/library/getpass.html.
+2. Byte order, size, and alignment (struct). https://docs.python.org/2/library/struct.html#byte-order-size-and-alignment.
+2. Format characters (struct). https://docs.python.org/2/library/struct.html#format-characters.
