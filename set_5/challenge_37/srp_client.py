@@ -1,7 +1,7 @@
 from pwn import *
 import json
 from getpass import getpass
-from random import randrange
+from secrets import randbelow
 from Crypto.Util.number import long_to_bytes
 import hmac
 from srp_helper import client_x, scramble
@@ -20,7 +20,7 @@ g = 2
 k = 3
 
 I = 'carol'
-a = randrange(1, N)
+a = randbelow(N)
 A = pow(g, a, N)
 
 r = remote('::1', 9999)
@@ -35,7 +35,7 @@ r.sendline(json.dumps(payload).encode())
 print("Waiting for salt and B from Steve.")
 line = r.recvline()
 data = json.loads(line)
-s = data["s"]
+s = bytes.fromhex(data["s"])
 B = data["B"]
 
 u = scramble(A, B)
@@ -47,7 +47,7 @@ S_c = pow(B - k * pow(g, x, N), a + u * x, N)
 K_c = hashlib.sha256(long_to_bytes(S_c)).digest()
 
 print("Sending MAC of session key to Steve.")
-mac = hmac.digest(K_c, long_to_bytes(s), 'sha256')
+mac = hmac.digest(K_c, s, 'sha256')
 r.sendline(mac.hex().encode())
 
 line = r.recvline(keepends=False)

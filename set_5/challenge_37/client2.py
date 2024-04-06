@@ -31,13 +31,13 @@ r.sendline(json.dumps(payload).encode())
 print("Waiting for salt and B from Steve.")
 line = r.recvline()
 data = json.loads(line)
-s = data['s']
+s = bytes.fromhex(data['s'])
 
 S_c = 0
 K_c = hashlib.sha256(long_to_bytes(S_c)).digest()
 
 print("Sending MAC of session key to Steve.")
-mac = hmac.digest(K_c, long_to_bytes(s), 'sha256')
+mac = hmac.digest(K_c, s, 'sha256')
 r.sendline(mac.hex().encode())
 
 line = r.recvline(keepends=False)
