@@ -25,3 +25,4 @@
 2. Padding (cryptography), PKCS#7. https://en.wikipedia.org/wiki/Padding_(cryptography)#PKCS#5_and_PKCS#7.
 2. SRP Protocol Design. http://srp.stanford.edu/design.html.
 2. Python os.urandom. https://docs.python.org/3/library/os.html#os.urandom.
+2. Random number generation. https://cryptography.io/en/latest/random-numbers/.
