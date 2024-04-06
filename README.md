@@ -26,3 +26,4 @@
 2. SRP Protocol Design. http://srp.stanford.edu/design.html.
 2. Python os.urandom. https://docs.python.org/3/library/os.html#os.urandom.
 2. Random number generation. https://cryptography.io/en/latest/random-numbers/.
+2. Python secrets.randbelow. https://docs.python.org/3/library/secrets.html#secrets.randbelow.
