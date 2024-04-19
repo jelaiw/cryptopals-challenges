@@ -43,6 +43,7 @@ else:
     print(line)
     exit(1)
 
+I = data["I"]
 A = data["A"]
 
 print("Waiting for MAC from Carol.")
@@ -51,14 +52,59 @@ mac_bytes = bytes.fromhex(line.decode())
 
 # Crack password.
 wordlist = [b'password', b'1234', b'foobar']
+cracked = None
 for word in wordlist:
     x = client_x(s, word)
     S = A * pow(g, u * x, N) % N
     K = hashlib.sha256(long_to_bytes(S)).digest()
     if hmac.compare_digest(mac_bytes, hmac.digest(K, s, 'sha256')):
-        print(f"Password is {word}.")
-    else:
-        print(f"Tried {word}.")
+        cracked = word
 
-l.sendline(b"OK")
+if not cracked:
+    print("Abort. Exhausted word list.")
+    l.sendline(b'Nein') # Humm.
+    l.close()
+    exit(2)
+
+# Verify cracked password with real server.
+r = remote('::1', 9998)
+
+# Replace Carol's public value A.
+a = randbelow(N)
+_A = pow(g, a, N)
+
+print("Sending I and A to Steve.")
+payload = {
+    "I": I,
+    "A": _A,
+}
+r.sendline(json.dumps(payload).encode())
+
+print("Waiting for salt, B, and u from Steve.")
+line = r.recvline()
+data = json.loads(line)
+s = bytes.fromhex(data["s"])
+B = data["B"]
+u = data["u"]
+
+# Try cracked password
+x = client_x(s, cracked)
+
+S_c = pow(B, a + u * x, N)
+K_c = hashlib.sha256(long_to_bytes(S_c)).digest()
+
+print("Sending MAC of session key to Steve.")
+mac = hmac.digest(K_c, s, 'sha256')
+r.sendline(mac.hex().encode())
+
+line = r.recvline(keepends=False)
+r.close()
+
+if b'OK' == line:
+    print(f"Cracked password {cracked} is valid.")
+else:
+    print(f"Cracked password {cracked} from client is bad or has typo.")
+
+# Humm, what makes sense here??
+l.sendline(line)
 l.close()
