@@ -27,3 +27,4 @@
 2. Python os.urandom. https://docs.python.org/3/library/os.html#os.urandom.
 2. Random number generation. https://cryptography.io/en/latest/random-numbers/.
 2. Python secrets.randbelow. https://docs.python.org/3/library/secrets.html#secrets.randbelow.
+2. Number Theory and Cryptography. Levin M, Kulikov A. University of California San Diego, https://www.coursera.org/learn/number-theory-cryptography.
