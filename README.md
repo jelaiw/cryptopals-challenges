@@ -28,3 +28,5 @@
 2. Random number generation. https://cryptography.io/en/latest/random-numbers/.
 2. Python secrets.randbelow. https://docs.python.org/3/library/secrets.html#secrets.randbelow.
 2. Number Theory and Cryptography. Levin M, Kulikov A. University of California San Diego, https://www.coursera.org/learn/number-theory-cryptography.
+2. PyCryptodome bytes_to_long. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.bytes_to_long.
+2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
