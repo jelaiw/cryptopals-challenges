@@ -30,3 +30,4 @@
 2. Number Theory and Cryptography. Levin M, Kulikov A. University of California San Diego, https://www.coursera.org/learn/number-theory-cryptography.
 2. PyCryptodome bytes_to_long. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.bytes_to_long.
 2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
+2. SymPy crt. https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.modular.crt.
