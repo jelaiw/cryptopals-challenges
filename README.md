@@ -31,3 +31,4 @@
 2. PyCryptodome bytes_to_long. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.bytes_to_long.
 2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
 2. SymPy crt. https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.modular.crt.
+2. SymPy integer_nthroot. https://docs.sympy.org/latest/modules/core.html#sympy.core.power.integer_nthroot.
