@@ -32,3 +32,4 @@
 2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
 2. SymPy crt. https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.modular.crt.
 2. SymPy integer_nthroot. https://docs.sympy.org/latest/modules/core.html#sympy.core.power.integer_nthroot.
+2. "Bleichenbacher's RSA signature forgery based on implementation error". Finney, H. https://mailarchive.ietf.org/arch/msg/openpgp/5rnE9ZRN1AokBVj3VqblGlP63QE/.
