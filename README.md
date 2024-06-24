@@ -33,3 +33,4 @@
 2. SymPy crt. https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.modular.crt.
 2. SymPy integer_nthroot. https://docs.sympy.org/latest/modules/core.html#sympy.core.power.integer_nthroot.
 2. "Bleichenbacher's RSA signature forgery based on implementation error". Finney, H. https://mailarchive.ietf.org/arch/msg/openpgp/5rnE9ZRN1AokBVj3VqblGlP63QE/.
+2. https://landonhemsley.com/bleichenbacher-06-rsa-signature-forgery-what-they-assume-you-know/.
