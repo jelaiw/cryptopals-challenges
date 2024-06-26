@@ -36,3 +36,4 @@
 2. "Bleichenbacher ’06 RSA Signature Forgery: What they assume you know". Hemsley, L. https://landonhemsley.com/bleichenbacher-06-rsa-signature-forgery-what-they-assume-you-know/.
 2. "Serious Crytography: A Practical Introduction to Modern Encryption". Aumasson, JP. No Starch Press, 2018.
 2. PyCryptodome RSA key type. https://www.pycryptodome.org/src/public_key/rsa.
+2. PyCryptodome PKCS#1 v1.5 (RSA) signatures. https://www.pycryptodome.org/src/signature/pkcs1_v1_5.
