@@ -35,3 +35,4 @@
 2. "Bleichenbacher's RSA signature forgery based on implementation error". Finney, H. https://mailarchive.ietf.org/arch/msg/openpgp/5rnE9ZRN1AokBVj3VqblGlP63QE/.
 2. "Bleichenbacher ’06 RSA Signature Forgery: What they assume you know". Hemsley, L. https://landonhemsley.com/bleichenbacher-06-rsa-signature-forgery-what-they-assume-you-know/.
 2. "Serious Crytography: A Practical Introduction to Modern Encryption". Aumasson, JP. No Starch Press, 2018.
+2. PyCryptodome RSA key type. https://www.pycryptodome.org/src/public_key/rsa.
