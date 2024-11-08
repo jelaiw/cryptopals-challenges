@@ -5,6 +5,7 @@
 2. Rust hex::decode. https://docs.rs/hex/latest/hex/fn.decode.html.
 2. Rust String::from_utf8_lossy. https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy.
 2. Rust base64 URL-safe alphabet. https://docs.rs/base64/latest/base64/#url-safe-alphabet.
+2. Python int.to_bytes. https://docs.python.org/3/library/stdtypes.html#int.to_bytes.
 2. Python randrange. https://docs.python.org/3/library/random.html#functions-for-integers.
 2. Python SHA1. https://docs.python.org/3/library/hashlib.html#hashlib.sha1.
 2. pwntools GitHub repo. https://github.com/Gallopsled/pwntools.
