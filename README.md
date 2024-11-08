@@ -6,6 +6,8 @@
 2. Rust String::from_utf8_lossy. https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy.
 2. Rust base64 URL-safe alphabet. https://docs.rs/base64/latest/base64/#url-safe-alphabet.
 2. Python int.to_bytes. https://docs.python.org/3/library/stdtypes.html#int.to_bytes.
+2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
+2. Source code for long_to_bytes. https://github.com/Legrandin/pycryptodome/blob/dc92e70ffb276d946364f62d0f87c6d66d75ffe3/lib/Crypto/Util/number.py#L407.
 2. Python randrange. https://docs.python.org/3/library/random.html#functions-for-integers.
 2. Python SHA1. https://docs.python.org/3/library/hashlib.html#hashlib.sha1.
 2. pwntools GitHub repo. https://github.com/Gallopsled/pwntools.
