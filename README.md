@@ -9,6 +9,7 @@
 2. PyCryptodome long_to_bytes. https://www.pycryptodome.org/src/util/util#Crypto.Util.number.long_to_bytes.
 2. Source code for long_to_bytes. https://github.com/Legrandin/pycryptodome/blob/dc92e70ffb276d946364f62d0f87c6d66d75ffe3/lib/Crypto/Util/number.py#L407.
 2. Python randrange. https://docs.python.org/3/library/random.html#functions-for-integers.
+2. Python randbelow. https://docs.python.org/3/library/secrets.html#random-numbers.
 2. Python SHA1. https://docs.python.org/3/library/hashlib.html#hashlib.sha1.
 2. pwntools GitHub repo. https://github.com/Gallopsled/pwntools.
 2. pwntools documentation. https://docs.pwntools.com/.
